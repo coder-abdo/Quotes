@@ -1,0 +1,126 @@
+:root {
+    --font: 'Open Sans', sans-serif;
+    --font-n: 400;
+    --font-b: 700;
+    --primary: #007bff;
+    --success: #28a745;
+    --gray: #d4d9df;
+    --title-color: #C7102E;
+    --author-color: #DC3C6E;
+    --disable-color: #4c9ff9;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+@media(max-width: 37.5em){
+    html {font-size: 50%;}
+    .heading {
+        font-size: 3rem;
+    }
+
+}
+body {
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+a {
+    text-decoration: none;
+    color:currentColor;
+}
+.container {
+    width: 98%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: var(--font-n);
+}
+.heading {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: var(--title-color);
+    font-weight: var(--font-b);
+}
+.author-qoute {
+    font-size: 2.2rem;
+    margin: 0 2rem;
+    color: var(--author-color);
+}
+hr {
+    border-top: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn {
+    border: 1px solid transparent;
+    padding: 1rem 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    transition: background-color .3s ease-in-out, 
+                border-color .3s ease-in-out, 
+                color .3s linear;
+    border-radius: 3px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .15);
+}
+.btn--success {
+    background-color: var(--success);
+}
+.btn--primary {
+    background-color: var(--primary);
+}
+.disable {
+    background-color: var(--disable-color);
+}
+.btn--primary:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+    
+}
+.btn--success:hover {
+    background-color: transparent;
+    border-color: var(--success);
+    color: var(--success);
+}
+.disable:hover {
+    background-color: #4c9ff9;
+    cursor: not-allowed;
+    color: #fff;
+}
+svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+    margin-left: 0.5rem;
+    transition: fill .3s linear;
+}
+.btn--primary:hover svg {
+    fill: var(--primary);
+}
+.disable:hover svg {
+    fill: #fff;
+}
